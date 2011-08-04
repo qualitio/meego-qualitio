@@ -39,8 +39,8 @@ class MeegoTestCase(ModelCustomization):
         model = TestCase
 
 class MeegoTestRun(ModelCustomization):
-    hwbuild = models.CharField(max_length=256, blank=True, null=True)
-    hwproduct = models.CharField(max_length=256, blank=True, null=True)
+    hwbuild = models.CharField(max_length=256, blank=True, null=True, verbose_name="SW Image")
+    hwproduct = models.CharField(max_length=256, blank=True, null=True, verbose_name="Hardware")
 
     def calculate_set_name(self):
         set_list = []
